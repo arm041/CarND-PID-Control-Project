@@ -28,16 +28,16 @@ std::string hasData(std::string s) {
   return "";
 }
 
-int main(int argc, char *argv[])
+int main()   //main(int argc, char *argv[]) for testing purposes
 {
   uWS::Hub h;
 
   PID pid;
   // TODO: Initialize the pid variable.
 
-  double Kp = atof(argv[1]);//-0.5;
-  double Ki = atof(argv[2]);//0;
-  double Kd = atof(argv[3]);//-0.5;
+  double Kp = -0.09;//atof(argv[1]);
+  double Ki = -0.0025;//atof(argv[2]);
+  double Kd = -0.75;//atof(argv[3]);
 
   pid.Init(Kp, Ki, Kd);
 
